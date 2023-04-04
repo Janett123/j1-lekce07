@@ -53,7 +53,7 @@ class SvatkyTest {
     @Test
     void getSeznamJmen() {
         Svatky svatky = new Svatky();
-        assertEquals(37, svatky.getPocetJmen());
+        assertEquals(37, svatky.getSeznamJmen().size());
 
         //Zkontrolovat, že seznam jmen má správný počet položek.
     }
@@ -110,6 +110,7 @@ class SvatkyTest {
         Svatky svatky = new Svatky();
         svatky.smazatSvatek("Přemysl");
         assertEquals(36, svatky.getPocetJmen());
+        assertFalse(svatky.jeVSeznamu("Přemysl"));
 
         //Zkontrolovat, že po smazání bude počet svátků odpovídat novému počtu.
     }
